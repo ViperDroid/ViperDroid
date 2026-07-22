@@ -68,4 +68,12 @@ Full-stack engineer into **backend, security, and automation**. I build the hard
 ## 📫 Reach me
 🌐 <a href="https://zakarea-jabbarr.netlify.app">zakarea-jabbarr.netlify.app</a> &nbsp;·&nbsp; 💬 Telegram <a href="https://t.me/i_peu">@i_peu</a>
 
-<!-- SNAKE_PLACEHOLDER -->
+## 🐍 Contribution snake
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ViperDroid/ViperDroid/output/snake-dark.svg"/>
+    <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/ViperDroid/ViperDroid/output/snake.svg"/>
+  </picture>
+</div>
+
+<div align="center"><sub><code>Don't hate me, hate the code.</code> · built by ViperDroid 🐉</sub></div>
