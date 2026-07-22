@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 260" width="1000" height="260" role="img" aria-label="ViperDroid">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e14"/>
+      <stop offset="1" stop-color="#0d1424"/>
+    </linearGradient>
+    <clipPath id="reveal">
+      <rect x="118" y="78" width="0" height="92">
+        <animate attributeName="width" from="0" to="470" begin="0.4s" dur="1.6s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1000" height="260" rx="18" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="998" height="258" rx="17" fill="none" stroke="#1c2634" stroke-width="1.5"/>
+
+  <!-- faint vertical grid -->
+  <g stroke="#12203a" stroke-width="1" opacity="0.5">
+    <line x1="120" y1="0" x2="120" y2="260"/>
+    <line x1="320" y1="0" x2="320" y2="260"/>
+    <line x1="520" y1="0" x2="520" y2="260"/>
+    <line x1="720" y1="0" x2="720" y2="260"/>
+    <line x1="900" y1="0" x2="900" y2="260"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#22d3ee" stroke-width="2.5" fill="none" opacity="0.8">
+    <path d="M22,54 L22,30 L46,30"/>
+    <path d="M978,54 L978,30 L954,30"/>
+    <path d="M22,206 L22,230 L46,230"/>
+    <path d="M978,206 L978,230 L954,230"/>
+  </g>
+
+  <!-- moving scanline -->
+  <rect x="20" width="960" height="2" fill="#22d3ee" opacity="0.14">
+    <animate attributeName="y" values="30;230;30" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- prompt -->
+  <text x="70" y="150" font-family="'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="70" font-weight="bold" fill="#22c55e">&#10095;</text>
+
+  <!-- glow copy of name (pulses) -->
+  <text x="120" y="150" font-family="'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="72" font-weight="bold" fill="url(#grad)" filter="url(#glow)" clip-path="url(#reveal)" opacity="0.5">
+    ViperDroid
+    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="2.6s" begin="2s" repeatCount="indefinite"/>
+  </text>
+  <!-- crisp name (typed reveal) -->
+  <text x="120" y="150" font-family="'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="72" font-weight="bold" fill="url(#grad)" clip-path="url(#reveal)">ViperDroid</text>
+
+  <!-- typing cursor -->
+  <rect x="120" y="90" width="10" height="66" fill="#22d3ee">
+    <animate attributeName="x" from="120" to="586" begin="0.4s" dur="1.6s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- animated underline -->
+  <rect x="120" y="168" height="5" rx="2.5" width="0" fill="url(#grad)">
+    <animate attributeName="width" from="0" to="470" begin="0.4s" dur="1.6s" fill="freeze"/>
+  </rect>
+
+  <!-- cycling subtitle -->
+  <g font-family="'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="24" fill="#8b98a5">
+    <text x="122" y="208" opacity="0">&#10095; full-stack engineer<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.30;0.34;0.98;1" dur="6s" begin="2s" repeatCount="indefinite"/></text>
+    <text x="122" y="208" opacity="0">&#10095; security &amp; automation<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.33;0.37;0.63;0.67;1" dur="6s" begin="2s" repeatCount="indefinite"/></text>
+    <text x="122" y="208" opacity="0">&#10095; ai-security tools<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.66;0.70;1" dur="6s" begin="2s" repeatCount="indefinite"/></text>
+  </g>
+
+  <!-- blinking status dot -->
+  <circle cx="905" cy="210" r="6" fill="#22c55e"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <text x="920" y="216" font-family="'DejaVu Sans Mono', monospace" font-size="16" fill="#5b6b7c">online</text>
+</svg>
